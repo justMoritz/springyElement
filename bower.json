@@ -1,0 +1,21 @@
+{
+  "name": "springyElement",
+  "main": "springyElement.js",
+  "homepage": "https://github.com/justMoritz/springyElement",
+  "authors": [
+    "justMoritz <moritz@zimmermail.net>"
+  ],
+  "description": "jQuery plugin that adds a “springy Element” method",
+  "keywords": [
+    "springy",
+    "element"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
