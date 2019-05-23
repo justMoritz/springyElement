@@ -61,13 +61,20 @@ var springyElement = (function($){
     
     // if the total amount of pixels the element will have moved
     // does not exceed the max. amount of pixels the element is allowed to move
+    // will spring back if the movement has exeeded twelve times the modified amount
     if(
-      newXposition > modifier  || 
-      newYposition > modifier  || 
-      newXposition < -modifier || 
-      newYposition < -modifier 
+      newXposition > modifier  ||
+      newYposition > modifier  ||
+      newXposition < -modifier ||
+      newYposition < -modifier
     ){
-      // do nothing
+      if( newXposition > modifier*12  ||
+          newYposition > modifier*12  ||
+          newXposition < -modifier*12 ||
+          newYposition < -modifier*12
+      ){
+        $element.css('transform', 'translate('+ 0 + 'px, ' + 0 + 'px');
+      }
      }else{
        $element.css('transform', 'translate('+ newXposition + 'px, ' + newYposition + 'px');
      }
